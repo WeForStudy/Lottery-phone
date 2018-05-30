@@ -1,12 +1,28 @@
 import React, { Component } from "react";
-import { Text, View, TouchableOpacity } from "react-native";
+import {
+    Text,
+    View,
+    StyleSheet,
+    Image,
+    TouchableOpacity,
+
+} from "react-native";
+
 import { NavigationActions } from "react-navigation";
 import { connect } from "react-redux";
-
+import { YellowBox } from 'react-native';
+YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
 // import { incrementAction, decrementAction } from "../Actions/actionCreator";
 
+var netimg = [
+    'http://static.houdafs.com/static/data/photo/20180515131514.jpg',
+    'http://static.houdafs.com/static/data/photo/20180515131428.jpg',
+    'http://static.houdafs.com/static/data/photo/20180515131417.jpg'
+]
+
 class LoginView extends Component {
-  static navigationOptions = {
+
+    static navigationOptions = {
     header: null,
     title: '发现页面'
   };
@@ -21,19 +37,17 @@ class LoginView extends Component {
 
   render() {
     // const { counterCount, incrementAction, decrementAction } = this.props;
-    return (
-      <View
-        style={{
-          flex: 1,
-          justifyContent: "center",
-          alignItems: "center"
-        }}
-      >
-       <Text>这是发现页面</Text>
-      
-      </View>
-    );
+        return (
+          <View
+            style={styles.wrap}>
+
+           <Text>这是发现页面</Text>
+
+          </View>
+        );
   }
+
+
 }
 
 // const mapStateToProps = state => ({
@@ -44,6 +58,16 @@ class LoginView extends Component {
 //   incrementAction,
 //   decrementAction
 // };
+
+const styles = StyleSheet.create({
+    wrap:{
+        flex: 1,
+        // justifyContent: "center",
+        // alignItems: "center"
+    }
+
+
+})
 
 const Login = connect()(LoginView);
 
