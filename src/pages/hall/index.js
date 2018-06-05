@@ -6,9 +6,6 @@ import {
     Image,
     TouchableOpacity
 
-
-
-
 } from "react-native";
 import { NavigationActions } from "react-navigation";
 import { connect } from "react-redux";
@@ -25,7 +22,7 @@ var netimg = [
 
 ]
 
-class LoginView extends Component {
+class Hall extends Component {
   // static navigationOptions = {
   //   header: null,
   //   title: '首页'
@@ -88,9 +85,12 @@ const styles = StyleSheet.create({
         // alignItems: "center"
     },
     daletou:{
-        width:SCREEN_WIDTH,
-        height:px2dp(60),
-        backgroundColor:'pink'
+        position:'absolute',
+        top:175,right:(SCREEN_WIDTH-(SCREEN_WIDTH*0.95))*0.5,
+        width:SCREEN_WIDTH*0.95,
+        height:px2dp(150),
+        backgroundColor:'pink',
+        borderRadius:px2dp(10),
     }
 
 
@@ -105,6 +105,6 @@ const styles = StyleSheet.create({
 //   decrementAction
 // };
 
-const Login = connect()(LoginView);
+const LoginView = connect()(LoginView);
 
-export default Login;
+export default Hall;

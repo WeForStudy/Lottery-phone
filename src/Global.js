@@ -1,29 +1,36 @@
+
 import React, { Component } from 'react';
-import { Dimensions, StyleSheet,AppRegistry, PixelRatio, Platform, Alert } from 'react-native';
+import {
+    Dimensions,
+    AppRegistry,
+    PixelRatio,
+    Platform
+} from 'react-native';
 
 import FontSize from './tool/TextSize';
 import Colors from './tool/Colors';
 import { px2dp } from './tool/Tool';
 
 
-import { scaleSize, setSpText } from './tool'
+ import { scaleSize, setSpText,deviceWidth,deviceHeight } from './tool'
 
 
 
 
-global.fixSize = scaleSize  // 适配尺寸
-global.fontSize = setSpText // 适配字体
-var {height, width} = Dimensions.get('window');
+ global.fixSize = scaleSize  // 适配尺寸
+ global.fontSize = setSpText // 适配字体
+
+var  {height, width} = Dimensions.get('window');
 
 
 // 系统是iOS
 global.iOS = (Platform.OS === 'ios');
 // 系统是安卓
-global.Android = (Platform.OS === 'android');
+global.Android = (Platform.Android === 'android');
 // 获取屏幕宽度
-global.SCREEN_WIDTH = width;
+global.SCREEN_WIDTH = deviceWidth;
 // 获取屏幕高度
-global.SCREEN_HEIGHT = height;
+global.SCREEN_HEIGHT = deviceHeight;
 // 获取屏幕分辨率
 global.PixelRatio = PixelRatio.get();
 // 最小线宽
@@ -41,4 +48,4 @@ global.COLORS = Colors;
 
 
 
-module.exports = global;
+ module.exports = global;

@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 
 // import { incrementAction, decrementAction } from "../Actions/actionCreator";
 
-class LoginView extends Component {
+class Mylottery extends Component {
   static navigationOptions = {
     header: null,
     title: '我的页面'
@@ -45,6 +45,6 @@ class LoginView extends Component {
 //   decrementAction
 // };
 
-const Login = connect()(LoginView);
+const LoginView = connect()(LoginView);
 
-export default Login;
+export default Mylottery;

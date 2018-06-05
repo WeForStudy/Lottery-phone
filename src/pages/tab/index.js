@@ -4,10 +4,13 @@ import {
     Image,
 } from 'react-native';
 
+import Global from '../../../src/Global'
 //引入react-navigation依赖库
 import {
     TabNavigator,
 } from 'react-navigation';
+
+
 
 //展示的页面
 import Hall from '../hall';

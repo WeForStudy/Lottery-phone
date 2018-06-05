@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 
 // import { incrementAction, decrementAction } from "../Actions/actionCreator";
 
-class LoginView extends Component {
+class Bulletin extends Component {
   static navigationOptions = {
     title: '公告'
   };
@@ -43,6 +43,6 @@ class LoginView extends Component {
 //   decrementAction
 // };
 
-const Login = connect()(LoginView);
+const LoginView = connect()(LoginView);
 
-export default Login;
+export default Bulletin;

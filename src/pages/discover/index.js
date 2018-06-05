@@ -20,7 +20,7 @@ var netimg = [
     'http://static.houdafs.com/static/data/photo/20180515131417.jpg'
 ]
 
-class LoginView extends Component {
+class Discover extends Component {
 
     static navigationOptions = {
     header: null,
@@ -69,6 +69,6 @@ const styles = StyleSheet.create({
 
 })
 
-const Login = connect()(LoginView);
+const LoginView = connect()(LoginView);
 
-export default Login;
+export default Discover;

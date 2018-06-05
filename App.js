@@ -16,7 +16,7 @@ import { Provider } from 'react-redux'
 import store from './store'
 import AppNavigation from './src/navigation'
 
-import Global from './src/global'
+import './src/Global'
 
 
 export default class App extends Component {
