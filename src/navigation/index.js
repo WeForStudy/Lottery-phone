@@ -10,7 +10,6 @@ class AppNavigation extends Component {
     const { navigationState, dispatch } = this.props;
     return (
       <NavigationStack
-
       />
     );
   }

@@ -9,19 +9,14 @@ import {
 } from "react-native";
 import { NavigationActions } from "react-navigation";
 import { connect } from "react-redux";
-
+import Swiper from 'react-native-swiper'
 // import { incrementAction, decrementAction } from "../Actions/actionCreator";
-var Swiper = require('react-native-swiper');
 
-
-var netimg = [
+const netimg = [
     'http://static.houdafs.com/static/data/photo/20180515131514.jpg',
     'http://static.houdafs.com/static/data/photo/20180515131428.jpg',
     'http://static.houdafs.com/static/data/photo/20180515131417.jpg',
-
-
 ]
-
 class Hall extends Component {
   // static navigationOptions = {
   //   header: null,
@@ -36,11 +31,25 @@ class Hall extends Component {
     this.props.navigation.dispatch(navigateToScreen2);
   };
 
-
-  
-
   render() {
     // const { counterCount, incrementAction, decrementAction } = this.props;
+    const styles = StyleSheet.create({
+      wrap:{
+          flex: 1,
+          // justifyContent: "center",
+          // alignItems: "center"
+      },
+      daletou:{
+          position:'absolute',
+          top:175,right:(SCREEN_WIDTH-(SCREEN_WIDTH*0.95))*0.5,
+          width:SCREEN_WIDTH*0.95,
+          height:px2dp(150),
+          backgroundColor:'pink',
+          borderRadius:px2dp(10),
+      }
+  
+  
+  })
     return (
       <View
           style={styles.wrap}>
@@ -78,23 +87,7 @@ class Hall extends Component {
 
 
 
-const styles = StyleSheet.create({
-    wrap:{
-        flex: 1,
-        // justifyContent: "center",
-        // alignItems: "center"
-    },
-    daletou:{
-        position:'absolute',
-        top:175,right:(SCREEN_WIDTH-(SCREEN_WIDTH*0.95))*0.5,
-        width:SCREEN_WIDTH*0.95,
-        height:px2dp(150),
-        backgroundColor:'pink',
-        borderRadius:px2dp(10),
-    }
 
-
-})
 
 // const mapStateToProps = state => ({
 //   counterCount: state.CounterReducer.counter
@@ -105,6 +98,6 @@ const styles = StyleSheet.create({
 //   decrementAction
 // };
 
-const LoginView = connect()(LoginView);
+const Model = connect()(Hall);
 
-export default Hall;
+export default Model;

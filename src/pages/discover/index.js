@@ -5,13 +5,11 @@ import {
     StyleSheet,
     Image,
     TouchableOpacity,
-
 } from "react-native";
 
 import { NavigationActions } from "react-navigation";
 import { connect } from "react-redux";
-import { YellowBox } from 'react-native';
-YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
+// YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
 // import { incrementAction, decrementAction } from "../Actions/actionCreator";
 
 var netimg = [
@@ -69,6 +67,6 @@ const styles = StyleSheet.create({
 
 })
 
-const LoginView = connect()(LoginView);
+const Model = connect()(Discover);
 
-export default Discover;
+export default Model;

@@ -1,5 +1,5 @@
 
-const TextSize = (size) => {
+export const TextSize = (size) => {
     if (PixelRatio === 2) {
         // iphone 5s and older Androids
         if (SCREEN_WIDTH < 360) {
@@ -56,4 +56,3 @@ const TextSize = (size) => {
     return size;
 };
 
-module.exports = TextSize; // eslint-disable-line no-undef

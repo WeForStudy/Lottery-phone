@@ -45,6 +45,6 @@ class Mylottery extends Component {
 //   decrementAction
 // };
 
-const LoginView = connect()(LoginView);
+const  Model = connect()(Mylottery);
 
-export default Mylottery;
+export default Model;

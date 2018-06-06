@@ -43,6 +43,6 @@ class Bulletin extends Component {
 //   decrementAction
 // };
 
-const LoginView = connect()(LoginView);
+const Model = connect()(Bulletin);
 
-export default Bulletin;
+export default Model;
