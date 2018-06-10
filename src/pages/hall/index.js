@@ -39,7 +39,7 @@ class Hall extends Component {
           // justifyContent: "center",
           // alignItems: "center"
       },
-      daletou:{
+        double_chromosphere:{
           position:'absolute',
           top:175,right:(SCREEN_WIDTH-(SCREEN_WIDTH*0.95))*0.5,
           width:SCREEN_WIDTH*0.95,
@@ -58,8 +58,8 @@ class Hall extends Component {
                   {this.renderImg()}
               </Swiper>
           </View>
-         <View  style={styles.daletou}>
-
+         <View  style={styles.double_chromosphere}>
+              
 
          </View>
 
